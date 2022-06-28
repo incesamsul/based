@@ -1,7 +1,7 @@
 <div class="main-sidebar">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="index.html">YukCariTahu</a>
+            <a href="index.html">based</a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
             <a href="index.html">St</a>
@@ -30,13 +30,7 @@
                     <li id="liManajemenPengguna"><a class="nav-link" href="/admin/pengguna">Manajemen Pengguna</a></li>
                 </ul>
             </li>
-            <li class="" id="liSejarah"><a class="nav-link" href="{{ URL::to('/admin/kategori') }}"><i
-                        class="fas fa-list-alt"></i> <span>Kategori</span></a></li>
 
-            @foreach (getKategoriMenu() as $row)
-            <li class="" id="liSejarah"><a class="nav-link" href="{{ URL::to('/admin/info/' . $row->id_kategori) }}"><i
-                class="fas fa-chevron-circle-right"></i> <span>{{ $row->nama_kategori }}</span></a></li>
-            @endforeach
             {{-- END OF MENU ADMIN --}}
             @endif
 

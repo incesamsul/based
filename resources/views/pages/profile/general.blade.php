@@ -8,7 +8,8 @@
                 <ul class="list-unstyled list-unstyled-border">
                     <li class="media">
                         <div class="media-body text-center">
-                            <img src="{{ auth()->user()->foto == "" ? asset('stisla/assets/img/avatar/avatar-1.png') : asset('data/foto_profile/'.auth()->user()->foto . '/'. auth()->user()->foto) }}" alt="" class="rounded-circle mb-2" width="100">
+                            <img src="{{ auth()->user()->foto == '' ? asset('stisla/assets/img/avatar/avatar-1.png') : asset('data/foto_profile/' . auth()->user()->foto . '/' . auth()->user()->foto) }}"
+                                alt="" class="rounded-circle mb-2" width="100">
                             <div class="media-title"></div>
                             <div class="font-weight-600 text-muted text-small"></div>
                             <div class="font-weight-600 text-muted text-small">User</div>
@@ -16,7 +17,8 @@
                     </li>
                     <li class="media">
                         <div class="media-body">
-                            <a href="" class="btn btn-dark btn-lg btn-block btn-icon-split" data-toggle="modal" data-target="#modal">
+                            <a href="" class="btn btn-dark btn-lg btn-block btn-icon-split" data-toggle="modal"
+                                data-target="#modal">
                                 <i class="fas fa-camera"></i> Ganti Foto Profile
                             </a>
                         </div>
@@ -29,12 +31,7 @@
                             <div class="media-title">Jenis Profile</div>
                         </div>
                     </li>
-                    {{-- <li class="media">
-              <div class="media-body">
-                  <div class="float-right"><div class="font-weight-600 text-muted text-small"><i class="badge badge-danger">Tidak Aktif</i></div></div>
-                  <div class="media-title">Bot Telegram</div>
-              </div>
-            </li> --}}
+
                     <li class="media">
                         <div class="media-body">
                             <div class="float-right">
@@ -46,23 +43,15 @@
                     <li class="media">
                         <div class="media-body">
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Ganti Kata sandi" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <input type="text" class="form-control" placeholder="Ganti Kata sandi"
+                                    aria-label="Recipient's username" aria-describedby="basic-addon2">
                                 <div class="input-group-append">
                                     <button class="btn btn-dark" type="button">Ganti</button>
                                 </div>
                             </div>
                         </div>
                     </li>
-                    {{-- <li class="media">
-                <div class="media-body">
-                  <div class="form-group">
-                      <label for="exampleFormControlInput1">Aktivasi Bot Telegram</label>
-                      <input type="foto" class="form-control" id="exampleFormControlInput1" placeholder="ID Telegram">
-                    </div>
-                </div>
-              </li>
-              <p>Bot Telegram SIAKAD STMIK AKBA
-                  Aktifkan fitur Bot Telegram dengan mendaftarkan ID Telegram Anda. Fitur ini akan memberikan layanan notifikasi dan akses perintah SIAKAD STMIK AKBA melalui aplikasi Telegram. Klik SASiakadBot untuk menjalankan bot ini.</p> --}}
+
                 </ul>
             </div>
         </div>
@@ -79,7 +68,8 @@
                     <ul class="list-unstyled list-unstyled-border">
                         <li class="media">
                             <div class="media-body text-center">
-                                <img src="{{ auth()->user()->foto == "" ? asset('stisla/assets/img/avatar/avatar-1.png') : asset('data/foto_profile/'.auth()->user()->foto . '/'. auth()->user()->foto) }}" alt="" class="rounded-circle mb-2" width="200">
+                                <img src="{{ auth()->user()->foto == '' ? asset('stisla/assets/img/avatar/avatar-1.png') : asset('data/foto_profile/' . auth()->user()->foto . '/' . auth()->user()->foto) }}"
+                                    alt="" class="rounded-circle mb-2" width="200">
                                 <div class="media-title"></div>
                                 <div class="font-weight-600 text-muted text-small"></div>
                                 <div class="font-weight-600 text-muted text-small">User</div>
@@ -88,37 +78,40 @@
                         <li class="media">
                             <div class="media-body">
                                 @if ($user)
-                                <table class="table table-striped">
-                                    <tr>
-                                        <td class="bg-soft-primary">Nama</td>
-                                        <td>{{ $user->name }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="bg-soft-primary">Jensi Kelamin</td>
-                                        <td>{{ $user->jenis_kelamin }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="bg-soft-primary">Tempat Dan Tanggal Lahir</td>
-                                        <td>{{ $user->tempat_lahir . "  " . $user->tanggal_lahir }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="bg-soft-primary">Alamat</td>
-                                        <td>{{ $user->alamat }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="bg-soft-primary">Telepon</td>
-                                        <td>{{ $user->no_telp }}</td>
-                                    </tr>
-                                </table>
-                                <div class="alert alert-info">silahkan hubungi admin jika terdapat kesalahan data</div>
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <td class="bg-soft-primary">Nama</td>
+                                            <td>{{ $user->name }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bg-soft-primary">Jensi Kelamin</td>
+                                            <td>{{ $user->jenis_kelamin }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bg-soft-primary">Tempat Dan Tanggal Lahir</td>
+                                            <td>{{ $user->tempat_lahir . '  ' . $user->tanggal_lahir }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bg-soft-primary">Alamat</td>
+                                            <td>{{ $user->alamat }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bg-soft-primary">Telepon</td>
+                                            <td>{{ $user->no_telp }}</td>
+                                        </tr>
+                                    </table>
+                                    <div class="alert alert-info">silahkan hubungi admin jika terdapat kesalahan data
+                                    </div>
                                 @else
-                                <div class="alert alert-warning">Belum ada data user, untuk lebih lanjut hubungi admin</div>
+                                    <div class="alert alert-warning">Belum ada data user, untuk lebih lanjut hubungi
+                                        admin</div>
                                 @endif
                             </div>
                         </li>
                         <li class="media">
                             <div class="media-body">
-                                <a href="" class="btn btn-dark btn-lg btn-block btn-icon-split" data-toggle="modal" data-target="#modal">
+                                <a href="" class="btn btn-dark btn-lg btn-block btn-icon-split"
+                                    data-toggle="modal" data-target="#modal">
                                     <i class="fas fa-camera"></i> Ganti Foto Profile
                                 </a>
                                 {{-- <a href="" class="btn btn-dark btn-lg btn-block btn-icon-split">

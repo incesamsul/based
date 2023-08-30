@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Pos</title>
+    <title>SI Pengaduan masyarakat</title>
     <!-- Bootstrap CDN-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -25,6 +25,11 @@
     <section class="login-block">
         <div class="container-fluid login-wrapper ">
             <div class="row login-row">
+                <div class="col-md-8 banner-sec d-flex flex-column text-center">
+                    <img src="{{ asset('img/svg/ilustration/maps.svg') }}" alt="" width="600">
+                    <p class="text-secondary"><strong>based</strong></p>
+                    <small class="pb-5 text-secondary"> all in one system.</small>
+                </div>
                 <div class="col-md-4 login-sec ">
                     <h2><a href="{{ URL::to('/') }}" class="text-main">based</a></h2>
                     <p class="text-secondary"><small>hm</small></p>
@@ -64,11 +69,7 @@
                         <button type="submit" class="btn btn-block login-button main-radius">Login</button>
                     </form>
                 </div>
-                <div class="col-md-8 banner-sec d-flex flex-column text-center">
-                    <img src="{{ asset('img/svg/ilustration/med.svg') }}" alt="" width="500">
-                    <p class="text-secondary"><strong>based</strong></p>
-                    <small class="pb-5 text-secondary"> all in one system.</small>
-                </div>
+
             </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

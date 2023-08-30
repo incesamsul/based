@@ -8,7 +8,7 @@
     {{-- csrf token --}}
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
-    <title>based</title>
+    <title>Si pengaduan masyarakat</title>
 
     <!-- General CSS Files -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -18,12 +18,15 @@
 
 
     {{-- sweetalert --}}
-    <link rel="stylesheet" href="{{ asset('plugins/sweetalert2/sweetalert2.min.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('plugins/sweetalert2/sweetalert2.min.css') }}"> --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.20/sweetalert2.min.css"
+        integrity="sha512-yX1R8uWi11xPfY7HDg7rkLL/9F1jq8Hyiz8qF4DV2nedX4IVl7ruR2+h3TFceHIcT5Oq7ooKi09UZbI39B7ylw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Template CSS -->
-    <link rel="stylesheet" href="{{asset('/css/main.css')}}">
-    <link rel="stylesheet" href="{{asset('stisla')}}/assets/css/style.css">
-    <link rel="stylesheet" href="{{asset('stisla')}}/assets/css/components.css">
+    <link rel="stylesheet" href="{{ asset('/css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('stisla') }}/assets/css/style.css">
+    <link rel="stylesheet" href="{{ asset('stisla') }}/assets/css/components.css">
 
     {{-- dropzone cdn --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/dropzone.min.css"
@@ -35,15 +38,25 @@
     <link rel="stylesheet" href="{{ asset('plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
     <link rel="stylesheet" href="{{ asset('plugins/datatables-select/css/select.bootstrap4.min.css') }}">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
+    <link rel="stylesheet" href="{{ asset('css/jquery-step.css') }}">
+
+    {{-- auto complete --}}
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 
 </head>
 
 @if (session('message'))
-{{ sweetAlert(session('message'), 'success') }}
+    {{ sweetAlert(session('message'), 'success') }}
 @endif
 @if (session('error'))
-{{ sweetAlert(session('error'), 'warning') }}
+    {{ sweetAlert(session('error'), 'warning') }}
 @endif
+<div class="import-loading">
+    <img src="{{ asset('img/svg_animated/Double Ring-1.9s-200px.svg') }}" alt="">
+    <span>Kami Akan Kembali</span>
+</div>
 <div class="loader">
-    <img src="{{ asset('img/svg_animated/loading.svg') }}" alt="loading">
+    <!-- <img src="{{ asset('img/svg_animated/loading.svg') }}" alt="loading"> -->
+    <i style="font-size: 50px;" class="fas fa-spinner fa-spin"></i>
 </div>
